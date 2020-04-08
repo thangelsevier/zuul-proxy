@@ -1,7 +1,8 @@
 # zuul-proxy
 A zuul proxy gateway with simple filters
 
-#### Get cloud config (through proxy port 9000)
+#### Forward services (through proxy port 8080)
 ```html
-http://localhost:9000/server/configs?filter=true&test=true&env=local&log=true
+http://localhost:8080/user/1
+http://localhost:8080/product/1
 ```
