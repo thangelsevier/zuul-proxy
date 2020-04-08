@@ -2,14 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <title>Home page</title>
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css">
+    <title>Services page</title>
 </head>
 <body style="background-color:grey">
 <div class="container" style="width:70%; background-color:white; padding: 10px; margin:auto">
     <h1 th:inline="text">SERVICES</h1>
-    <hr/>
-    <a href="/login" style="margin:auto"><h3>Login</h3></a>
-    <a href="/info" style="margin:auto"><h3>View info</h3></a>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Service name</td>
+                <td>Running port</td>
+                <td>URL</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">1</td>
+                <td>product-services</td>
+                <td>8100</td>
+                <td>
+                    <a href="/product/1">/product/1</a><br/>
+                    <a href="/product/2">/product/2</a><br/>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">2</td>
+                <td>user-service</td>
+                <td>8200</td>
+                <td>
+                    <a href="/user/1">/user/1</a><br/>
+                    <a href="/user/14">/user/14</a><br/>
+                    <a href="/user/1/history/1">/user/1/history/1</a><br/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 

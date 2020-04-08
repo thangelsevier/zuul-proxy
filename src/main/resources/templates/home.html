@@ -8,6 +8,9 @@
 <div class="container" style="width:70%; background-color:white; padding: 10px; margin:auto">
     <h1 th:inline="text">HOME PAGE</h1>
     <hr/>
+    <div th:if="${#httpServletRequest.remoteUser}">
+        Welcome <span th:text="${#httpServletRequest.remoteUser}"></span> !
+    </div>
     <a th:if="${#httpServletRequest.remoteUser == '' || #httpServletRequest.remoteUser == null}" href="/login" style="margin:auto"><h3>Login</h3></a>
     <a href="/services" style="margin:auto"><h3>View list services</h3></a>
 </div>
